@@ -7,9 +7,3 @@ class gpg {
         default: { include gpg::base }
     }
 }
-
-class gpg::base {
-    package{'gnupg':
-        ensure => installed,
-    }
-}
