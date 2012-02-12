@@ -3,7 +3,13 @@
 # GPLv3
 
 class gpg {
-    case $operatingsystem {
+    case $::operatingsystem {
+        centos: {
+            case $::lsbmajdistrelease {
+                6: { include gpg::centos6 }
+                default: { include gpg::base }
+            }
+        }
         default: { include gpg::base }
     }
 }
