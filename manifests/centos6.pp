@@ -1,5 +1,5 @@
 class gpg::centos6 inherits gpg::base {
-    Package['gpg']{
-        name => 'gpg2',
+    Package['gnupg']{
+        name => 'gnupg2',
     }
 }
